@@ -43,8 +43,13 @@ export default (state, action) => {
 			return {
 				...state,
 				filtered: state.contacts.filter(contact => {
-					const regex = new RegExp(`#{action.payload}`, 'gi');
-					return contact.name.match(regex) || contact.email.match(regex);
+					const regex = new RegExp(`${action.payload}`, 'gi');
+					return (
+						regex.test(contact.name) ||
+						regex.test(contact.email) ||
+						regex.test(contact.phone) ||
+						regex.test(contact.type)
+					);
 				})
 			};
 		case CLEAR_FILTER:
