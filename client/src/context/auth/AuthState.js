@@ -55,15 +55,15 @@ const AuthState = props => {
 
 	// Login User
 	const login = () => {
-		console.log('Load User');
+		console.log('Login');
 	};
 	// Logout
 	const logout = () => {
-		console.log('Load User');
+		console.log('Logout');
 	};
 	// Clear Errors
 	const clearErrors = () => {
-		console.log('Load User');
+		console.log('Clear Errors');
 	};
 
 	return (
